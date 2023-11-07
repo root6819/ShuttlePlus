@@ -114,13 +114,13 @@ android {
         def names = variant.flavors*.name
         def buildTypes = variant.buildType*.name
 
-        def debugFilters = ["paid", "free", 'amazonPaid', "amazonFree"]
+        def debugFilters =["free"]// ["paid", "free", 'amazonPaid', "amazonFree"]
         def relFilters = ["dev"]
 
         if (System.getenv("TRAVIS")) {
             relFilters << "dev"
-            relFilters << "amazonPaid"
-            relFilters << "amazonFree"
+            // relFilters << "amazonPaid"
+            // relFilters << "amazonFree"
         }
 
         def filter = { name -> names.contains(name) }
@@ -185,8 +185,8 @@ android {
         dev.res.srcDirs = ['src/paid/res']
         dev.java.srcDirs = ['src/paid/java']
 
-        paid.res.srcDirs = ['src/paid/res']
-        paid.java.srcDirs = ['src/paid/java']
+        // paid.res.srcDirs = ['src/paid/res']
+        // paid.java.srcDirs = ['src/paid/java']
 
         free.manifest.srcFile 'src/free/AndroidManifest.xml'
         free.res.srcDirs = ['src/free/res']
