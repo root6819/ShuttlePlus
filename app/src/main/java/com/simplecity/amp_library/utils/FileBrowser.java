@@ -75,7 +75,8 @@ public class FileBrowser {
                 } else {
                     baseFileObject = new FileObject();
                     baseFileObject.path = FileHelper.getPath(file);
-                    baseFileObject.name = FileHelper.getName(file.getName());
+                    baseFileObject.name =new String( 
+                        FileHelper.getName(file.getName()).getBytes("UTF-8"),"GBK");
                     baseFileObject.size = file.length();
                     ((FileObject) baseFileObject).extension = FileHelper.getExtension(file.getName());
                     if (TextUtils.isEmpty(((FileObject) baseFileObject).extension)) {
