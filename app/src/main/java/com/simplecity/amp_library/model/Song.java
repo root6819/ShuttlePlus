@@ -106,8 +106,10 @@ public class Song implements
         name ="a1>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
 
         artistId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST_ID));
+//root6819
+        artistName ="a2>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME));
 
-        artistName = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
+        //cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
 
         albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
 
@@ -143,6 +145,8 @@ public class Song implements
         //Populate the artwork key & sort key properties if null.
         setSortKey();
         setArtworkKey();
+        //root6819
+        cursor.close();
     }
 
     public Song() {
