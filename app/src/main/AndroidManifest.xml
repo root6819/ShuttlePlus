@@ -321,7 +321,7 @@
             android:value="${CRASHLYTICS_API_KEY}"/> -->
   <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="1:1070470006058:android:b5a3674a6d3ce9922e4a53"/>
+            android:value="AIzaSyAh7_5u-7fEkFukHbNCJrHFK8rZ2Ph01Vk"/>
         <!-- Android Auto -->
         <meta-data
             android:name="com.google.android.gms.car.application"
