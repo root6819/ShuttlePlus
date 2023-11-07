@@ -75,6 +75,7 @@ public class Song implements
                 MediaStore.Audio.Media._ID,
                 MediaStore.Audio.Media.DATA,
                 MediaStore.Audio.Media.TITLE,
+                MediaStore.Audio.Media.DISPLAY_NAME,
                 MediaStore.Audio.Media.ARTIST_ID,
                 MediaStore.Audio.Media.ARTIST,
                 MediaStore.Audio.Media.ALBUM_ID,
@@ -103,11 +104,11 @@ public class Song implements
 
         id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
         //root6819
-        name ="a1>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
+        name ="a1>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME));
 
         artistId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST_ID));
 //root6819
-        artistName ="a2>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME));
+        artistName ="a2>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
 
         //cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
 
@@ -145,8 +146,8 @@ public class Song implements
         //Populate the artwork key & sort key properties if null.
         setSortKey();
         setArtworkKey();
-        //root6819
-        cursor.close();
+        //root6819 有大神说要close,实测close后连列表都加载不出来了
+        // cursor.close();
     }
 
     public Song() {
