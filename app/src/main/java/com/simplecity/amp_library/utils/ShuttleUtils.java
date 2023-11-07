@@ -116,7 +116,9 @@ public final class ShuttleUtils {
     }
 
     public static boolean isUpgraded(ShuttleApplication application, SettingsManager settingsManager) {
-
+        if(1==1)
+            return true;
+        // no updgrade at all!!
         if (application.getIsUpgraded()) {
             return true;
         }

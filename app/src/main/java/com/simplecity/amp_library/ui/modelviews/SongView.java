@@ -151,7 +151,7 @@ public class SongView extends BaseSelectableViewModel<SongView.ViewHolder> imple
     public void bindView(ViewHolder holder) {
         super.bindView(holder);
 
-        holder.lineOne.setText(song.name);
+        holder.lineOne.setText("xxx>>"+song.name);
 
         if (holder.playCount != null) {
             if (showPlayCount && song.playCount > 1) {
