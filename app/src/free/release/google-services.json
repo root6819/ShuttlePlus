@@ -1,55 +1,28 @@
 {
     "project_info": {
-      "project_number": "0"
+      "project_number": "1070470006058",
+      "project_id": "test1-73d25",
+      "storage_bucket": "test1-73d25.appspot.com"
     },
     "client": [
       {
         "client_info": {
+          "mobilesdk_app_id": "1:1070470006058:android:b5a3674a6d3ce9922e4a53",
           "android_client_info": {
-            "package_name": "another.music.player"
+            "package_name": "com.abc.test"
           }
         },
+        "oauth_client": [],
         "api_key": [
           {
-            "current_key": ""
+            "current_key": "AIzaSyAh7_5u-7fEkFukHbNCJrHFK8rZ2Ph01Vk"
           }
-        ]
-      },
-      {
-        "client_info": {
-          "android_client_info": {
-            "package_name": "com.simplecity.amp_pro"
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
           }
-        },
-        "api_key": [
-          {
-            "current_key": ""
-          }
-        ]
-      },
-      {
-        "client_info": {
-          "android_client_info": {
-            "package_name": "com.simplecity.amp_pro.debug"
-          }
-        },
-        "api_key": [
-          {
-            "current_key": ""
-          }
-        ]
-      },
-      {
-        "client_info": {
-          "android_client_info": {
-            "package_name": "another.music.player.debug"
-          }
-        },
-        "api_key": [
-          {
-            "current_key": ""
-          }
-        ]
+        }
       }
     ],
     "configuration_version": "1"
