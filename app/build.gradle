@@ -168,15 +168,15 @@ android {
             applicationId "another.music.player"
         }
 
-        amazonPaid {
-            dimension "all"
-            applicationId "com.simplecity.amp_pro"
-        }
+        // amazonPaid {
+        //     dimension "all"
+        //     applicationId "com.simplecity.amp_pro"
+        // }
 
-        amazonFree {
-            dimension "all"
-            applicationId "another.music.player"
-        }
+        // amazonFree {
+        //     dimension "all"
+        //     applicationId "another.music.player"
+        // }
     }
 
     sourceSets {
