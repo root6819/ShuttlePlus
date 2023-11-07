@@ -158,10 +158,10 @@ android {
             resConfigs "en", "xxhdpi"
         }
 
-        paid {
-            dimension "all"
-            applicationId "com.simplecity.amp_pro"
-        }
+        // paid {
+        //     dimension "all"
+        //     applicationId "com.simplecity.amp_pro"
+        // }
 
         free {
             dimension "all"
@@ -192,11 +192,11 @@ android {
         free.res.srcDirs = ['src/free/res']
         free.java.srcDirs = ['src/free/java']
 
-        amazonPaid.res.srcDirs = ['src/paid/res']
-        amazonPaid.java.srcDirs = ['src/paid/java']
+        // amazonPaid.res.srcDirs = ['src/paid/res']
+        // amazonPaid.java.srcDirs = ['src/paid/java']
 
-        amazonFree.res.srcDirs = ['src/free/res']
-        amazonFree.java.srcDirs = ['src/free/java']
+        // amazonFree.res.srcDirs = ['src/free/res']
+        // amazonFree.java.srcDirs = ['src/free/java']
     }
 
     lintOptions {

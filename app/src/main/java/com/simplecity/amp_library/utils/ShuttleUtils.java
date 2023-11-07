@@ -80,7 +80,7 @@ public final class ShuttleUtils {
     }
 
     public static boolean isAmazonBuild() {
-        return BuildConfig.FLAVOR.equals("amazonFree") || BuildConfig.FLAVOR.equals("amazonPaid");
+        return false;// BuildConfig.FLAVOR.equals("amazonFree") || BuildConfig.FLAVOR.equals("amazonPaid");
     }
 
     /**
