@@ -316,10 +316,12 @@
                 android:resource="@xml/provider_paths"/>
         </provider>
 
-        <meta-data
+        <!-- <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="${CRASHLYTICS_API_KEY}"/>
-
+            android:value="${CRASHLYTICS_API_KEY}"/> -->
+  <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1:1070470006058:android:b5a3674a6d3ce9922e4a53"/>
         <!-- Android Auto -->
         <meta-data
             android:name="com.google.android.gms.car.application"
