@@ -319,9 +319,9 @@
         <!-- <meta-data
             android:name="io.fabric.ApiKey"
             android:value="${CRASHLYTICS_API_KEY}"/> -->
-  <meta-data
+  <!-- <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="AIzaSyAh7_5u-7fEkFukHbNCJrHFK8rZ2Ph01Vk"/>
+            android:value="AIzaSyAh7_5u-7fEkFukHbNCJrHFK8rZ2Ph01Vk"/> -->
         <!-- Android Auto -->
         <meta-data
             android:name="com.google.android.gms.car.application"

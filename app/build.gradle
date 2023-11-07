@@ -354,4 +354,4 @@ play {
 }
 
 apply plugin: Dependencies.BuildPlugins.playServices
-apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'com.google.gms.google-services'
