@@ -25,6 +25,7 @@ import com.simplecity.amp_library.utils.sorting.SortManager;
 import com.simplecityapps.recycler_adapter.recyclerview.BaseViewHolder;
 import java.util.Arrays;
 import java.util.List;
+import com.simplecity.amp_library.utils.LogUtils;
 
 public class SongView extends BaseSelectableViewModel<SongView.ViewHolder> implements SectionedView {
 
