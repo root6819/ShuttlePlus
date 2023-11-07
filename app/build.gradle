@@ -183,8 +183,8 @@ android {
     sourceSets {
         main.aidl.srcDirs = ['src/main/java']
 
-        dev.res.srcDirs = ['src/paid/res']
-        dev.java.srcDirs = ['src/paid/java']
+        // dev.res.srcDirs = ['src/paid/res']
+        // dev.java.srcDirs = ['src/paid/java']
 
         // paid.res.srcDirs = ['src/paid/res']
         // paid.java.srcDirs = ['src/paid/java']
