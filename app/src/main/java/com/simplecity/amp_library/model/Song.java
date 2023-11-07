@@ -103,14 +103,12 @@ public class Song implements
     public Song(Cursor cursor) {
 
         id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
-        //root6819
-        name ="a1>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME));
+        //root6819 "a1>>"+
+        name = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
 
         artistId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST_ID));
 //root6819
-        artistName ="a2>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
-
-        //cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
+        artistName = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
 
         albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
 

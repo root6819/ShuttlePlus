@@ -152,15 +152,18 @@ public class SongView extends BaseSelectableViewModel<SongView.ViewHolder> imple
     public void bindView(ViewHolder holder) {
         super.bindView(holder);
         String title=song.name;
-        if(!TextUtils.isEmpty(title)){
-            try{
-                byte[] bytes=song.name.getBytes("ISO-8859-1");
-                title=new String(bytes,"UTF-8");
-            }
-            catch(Exception ex){
-                    LogUtils.logException(TAG, "Failed convert song name 2 UTF-8", ex);
-            }
-        }
+         LogUtils.logException(TAG, "Failed convert song name "+title, null);
+
+        //root6819
+        // if(!TextUtils.isEmpty(title)){
+        //     try{
+        //         byte[] bytes=song.name.getBytes("ISO-8859-1");
+        //         title=new String(bytes,"UTF-8");
+        //     }
+        //     catch(Exception ex){
+        //             LogUtils.logException(TAG, "Failed convert song name 2 UTF-8", ex);
+        //     }
+        // }
         
             holder.lineOne.setText(title);
 
