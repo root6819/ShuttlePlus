@@ -165,7 +165,8 @@ android {
 
         free {
             dimension "all"
-            applicationId "another.music.player"
+            applicationId  "com.abc.test"
+            //"another.music.player"
         }
 
         // amazonPaid {
