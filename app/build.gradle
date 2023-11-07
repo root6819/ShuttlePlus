@@ -150,13 +150,13 @@ android {
 
     productFlavors {
 
-        dev {
-            dimension "all"
+        // dev {
+        //     dimension "all"
 
-            applicationId "com.simplecity.amp_pro"
+        //     applicationId "com.simplecity.amp_pro"
 
-            resConfigs "en", "xxhdpi"
-        }
+        //     resConfigs "en", "xxhdpi"
+        // }
 
         // paid {
         //     dimension "all"
