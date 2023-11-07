@@ -157,7 +157,7 @@ public class SongView extends BaseSelectableViewModel<SongView.ViewHolder> imple
                 title=new String(bytes,"GBK");
             }
             catch(Exception ex){
-                    LogUtils.logException(TAG, "Failed convert song name 2 gbk", ex)
+                    LogUtils.logException(TAG, "Failed convert song name 2 gbk", ex);
             }
         }
         
