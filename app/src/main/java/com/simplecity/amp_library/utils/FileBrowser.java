@@ -75,7 +75,8 @@ public class FileBrowser {
                 } else {
                     baseFileObject = new FileObject();
                     baseFileObject.path = FileHelper.getPath(file);
-                    baseFileObject.name =  FileHelper.getName(file.getName());
+                    //root6819
+                    baseFileObject.name = file.getName();// FileHelper.getName(file.getName());
                     // try{
 
                     //   byte[] bytes=  baseFileObject.name.getBytes("UTF-8");

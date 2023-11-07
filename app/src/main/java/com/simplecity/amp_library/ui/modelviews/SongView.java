@@ -154,11 +154,11 @@ public class SongView extends BaseSelectableViewModel<SongView.ViewHolder> imple
         String title=song.name;
         if(!TextUtils.isEmpty(title)){
             try{
-                byte[] bytes=song.name.getBytes("UTF-8");
-                title=new String(bytes,"GBK");
+                byte[] bytes=song.name.getBytes("ISO-8859-1");
+                title=new String(bytes,"UTF-8");
             }
             catch(Exception ex){
-                    LogUtils.logException(TAG, "Failed convert song name 2 gbk", ex);
+                    LogUtils.logException(TAG, "Failed convert song name 2 UTF-8", ex);
             }
         }
         
