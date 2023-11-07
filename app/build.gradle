@@ -78,11 +78,11 @@ android {
 
     signingConfigs {
         release {
-            Properties properties = getProperties('../keystore.properties')
+            Properties properties = getProperties('./store/keystore.properties')
             storeFile file(getProperty(properties, 'store'))
             keyAlias getProperty(properties, 'alias')
             storePassword getProperty(properties, 'storePass')
-            keyPassword getProperty(properties, 'pass')
+            keyPassword getProperty(properties, 'keyPass')
         }
     }
 
