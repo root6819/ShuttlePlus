@@ -150,8 +150,18 @@ public class SongView extends BaseSelectableViewModel<SongView.ViewHolder> imple
     @Override
     public void bindView(ViewHolder holder) {
         super.bindView(holder);
-
-        holder.lineOne.setText("xxx>>"+song.name);
+        String title=song.name;
+        if(!TextUtils.isEmpty(title)){
+            try{
+                byte[] bytes=song.name.getBytes("UTF-8");
+                title=new String(bytes,"GBK");
+            }
+            catch(Exception ex){
+                    LogUtils.logException(TAG, "Failed convert song name 2 gbk", ex)
+            }
+        }
+        
+            holder.lineOne.setText(title);
 
         if (holder.playCount != null) {
             if (showPlayCount && song.playCount > 1) {
