@@ -235,8 +235,8 @@ public class TaggerDialog extends DialogFragment {
             if (tag == null) {
                 return;
             }
-
-            title = tag.getFirst(FieldKey.TITLE);
+//root6819 
+            title ="a8>>"+ tag.getFirst(FieldKey.TITLE);
             albumName = tag.getFirst(FieldKey.ALBUM);
             artistName = tag.getFirst(FieldKey.ARTIST);
             try {

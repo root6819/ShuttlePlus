@@ -35,7 +35,8 @@ class FileInfoDialog : DialogFragment() {
         val titleKey = titleView.findViewById<TextView>(R.id.key)
         titleKey.setText(R.string.song_title)
         val titleValue = titleView.findViewById<TextView>(R.id.value)
-        titleValue.text = fileObject!!.tagInfo.trackName
+        //root6819
+        titleValue.text ="a8>>"+ fileObject!!.tagInfo.trackName
 
         val trackNumberView = view.findViewById<View>(R.id.track_number)
         val trackNumberKey = trackNumberView.findViewById<TextView>(R.id.key)
