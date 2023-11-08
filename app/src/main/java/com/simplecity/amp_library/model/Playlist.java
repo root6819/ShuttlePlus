@@ -119,7 +119,7 @@ public class Playlist implements Serializable {
     public String toString() {
         return "Playlist{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='a6>>" + name + '\'' +
                 '}';
     }
 
