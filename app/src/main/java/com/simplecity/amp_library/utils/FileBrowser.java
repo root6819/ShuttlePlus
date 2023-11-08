@@ -77,6 +77,8 @@ public class FileBrowser {
                     baseFileObject.path = FileHelper.getPath(file);
                     //root6819
                     baseFileObject.name ="a3>>"+ file.getName();// FileHelper.getName(file.getName());
+                    LogUtils.logException(TAG, "a3 convert song name "+title, null);
+
                     // try{
 
                     //   byte[] bytes=  baseFileObject.name.getBytes("UTF-8");
