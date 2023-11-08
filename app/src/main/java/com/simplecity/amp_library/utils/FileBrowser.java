@@ -52,7 +52,7 @@ public class FileBrowser {
         if (files != null) {
             for (File file : files) {
                 BaseFileObject baseFileObject;
-
+                     //a4>>
                 if (file.isDirectory()) {
                     baseFileObject = new FolderObject();
                     baseFileObject.path = FileHelper.getPath(file);
@@ -77,7 +77,7 @@ public class FileBrowser {
                     baseFileObject.path = FileHelper.getPath(file);
                     //root6819
                     baseFileObject.name ="a3>>"+ file.getName();// FileHelper.getName(file.getName());
-                    LogUtils.logException(TAG, "a3 convert song name "+title, null);
+                    LogUtils.logException(TAG, "a3>> convert song name "+baseFileObject.name, null);
 
                     // try{
 
