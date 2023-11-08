@@ -43,11 +43,11 @@ class PlaylistListPresenter @Inject constructor(
                     //       return true;
             //root 6819 去重
              .map { playlists ->
-            val uniquePlaylists = playlists.distinctBy { it.name }
-            //去掉录音文件
-           .filter { !it.path.contains("sound_recorder") } // 过滤包含 "xxx" 的路径
-            uniquePlaylists.sortedWith(compareBy({ it.name }, { it.type }))
-        }
+                  val uniquePlaylists = playlists.distinctBy { it.name }
+                              //去掉录音文件
+                    .filter {item-> !item.path.contains("sound_recorder") } // 过滤包含 "xxx" 的路径
+                  uniquePlaylists.sortedWith(compareBy({ it.name }, { it.type }))
+             }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { playlists -> view?.setData(playlists) },
