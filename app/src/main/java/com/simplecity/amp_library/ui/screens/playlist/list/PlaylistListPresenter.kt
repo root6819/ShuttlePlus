@@ -33,12 +33,17 @@ class PlaylistListPresenter @Inject constructor(
 
     override fun loadData() {
         addDisposable(playlistsRepository.getAllPlaylists(songsRepository)
-            .map { playlists ->
-                playlists.apply {
-                    sortBy { playlist -> playlist.name }
-                    sortBy { playlist -> playlist.type }
-                }
-            }
+            // .map { playlists ->
+            //     playlists.apply {
+            //         sortBy { playlist -> playlist.name }
+            //         sortBy { playlist -> playlist.type }
+            //     }
+            // }
+            //root 6819 去重
+             .map { playlists ->
+            val uniquePlaylists = playlists.distinctBy { it.name }
+            uniquePlaylists.sortedWith(compareBy({ it.name }, { it.type }))
+        }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { playlists -> view?.setData(playlists) },

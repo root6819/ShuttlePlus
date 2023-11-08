@@ -43,8 +43,8 @@ public class TagInfo implements Serializable {
                     this.artistName = getTag(audioFile, FieldKey.ARTIST);
                     this.albumArtistName = getTag(audioFile, FieldKey.ALBUM_ARTIST);
                     this.albumName = getTag(audioFile, FieldKey.ALBUM);
-                    //这是文件夹对话框显示单曲的地方
-                     this.trackName ="a7>>"+file.getName();// getTag(audioFile, FieldKey.TITLE);
+                    //这是文件夹对话框显示单曲的地方"a7>>"+
+                     this.trackName =file.getName();// getTag(audioFile, FieldKey.TITLE);
                     //FieldKey.DISPLAY_NAME不存在
                   //  this.trackName ="a7>>"+ getTag(audioFile, FieldKey.DISPLAY_NAME);
 

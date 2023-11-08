@@ -355,6 +355,10 @@ public class FileHelper {
                 if (file.isDirectory()) {
                     return true;
                 } else {
+                    //root6819 过滤所有录音文件
+                      String canonPath = file.getCanonicalPath();
+                      if(canonPath.contains("sound_recorder") || canonPath.contains("call_rec"))
+                          return true;
                     String ext = getExtension(file.getName());
                     for (String allowedExtension : sExtensions) {
                         if (!TextUtils.isEmpty(ext)) {
