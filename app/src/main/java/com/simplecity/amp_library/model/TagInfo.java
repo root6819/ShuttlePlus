@@ -38,13 +38,15 @@ public class TagInfo implements Serializable {
             File file = new File(filePath);
             if (file.exists()) {
                 try {
+                    //root6819  这里知道file后，直接getName就是
                     AudioFile audioFile = AudioFileIO.read(file);
                     this.artistName = getTag(audioFile, FieldKey.ARTIST);
                     this.albumArtistName = getTag(audioFile, FieldKey.ALBUM_ARTIST);
                     this.albumName = getTag(audioFile, FieldKey.ALBUM);
                     //这是文件夹对话框显示单曲的地方
-                    // this.trackName ="a7>>"+ getTag(audioFile, FieldKey.TITLE);
-                    this.trackName ="a7>>"+ getTag(audioFile, FieldKey.DISPLAY_NAME);
+                     this.trackName ="a7>>"+file.getName();// getTag(audioFile, FieldKey.TITLE);
+                    //FieldKey.DISPLAY_NAME不存在
+                  //  this.trackName ="a7>>"+ getTag(audioFile, FieldKey.DISPLAY_NAME);
 
                     this.trackNumber = StringUtils.parseInt(getTag(audioFile, FieldKey.TRACK));
                     this.trackTotal = StringUtils.parseInt(getTag(audioFile, FieldKey.TRACK_TOTAL));
