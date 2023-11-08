@@ -125,6 +125,7 @@ public class Playlist implements Serializable {
 
     public static Song createSongFromPlaylistCursor(Cursor cursor) {
         Song song = new Song(cursor);
+        song.name="a5>>"+song.name;
         song.id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Playlists.Members.AUDIO_ID));
         song.playlistSongId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Playlists.Members._ID));
         song.playlistSongPlayOrder = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Playlists.Members.PLAY_ORDER));
