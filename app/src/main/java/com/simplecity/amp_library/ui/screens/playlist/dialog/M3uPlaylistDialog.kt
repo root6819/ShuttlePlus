@@ -44,7 +44,8 @@ class M3uPlaylistDialog : DialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-
+        //root6819
+  Toast.makeText(context, "test>>m3u "+TAG, Toast.LENGTH_SHORT).show()
         playlist = arguments!!.getSerializable(ARG_PLAYLIST) as Playlist
 
         val progressDialog = ProgressDialog(context)

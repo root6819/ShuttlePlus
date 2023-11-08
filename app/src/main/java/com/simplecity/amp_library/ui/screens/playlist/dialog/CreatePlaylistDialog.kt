@@ -59,7 +59,6 @@ class CreatePlaylistDialog : DialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-
         val songsToAdd: List<Song>? = arguments!!.getSerializable(ARG_SONGS) as? List<Song>
 
         @SuppressLint("InflateParams")
@@ -82,6 +81,8 @@ class CreatePlaylistDialog : DialogFragment() {
             ))
 
         val activity = activity
+        //root6819
+ Toast.makeText(activity, "test>>R.string.dialog_create_playlist_error", Toast.LENGTH_LONG)
 
         val builder = MaterialDialog.Builder(context!!)
             .customView(customView, false)
@@ -90,6 +91,8 @@ class CreatePlaylistDialog : DialogFragment() {
             .onPositive { materialDialog, dialogAction ->
                 val name = editText.text.toString()
                 if (!name.isEmpty()) {
+                            //root6819
+ Toast.makeText(activity, "test>>idForPlaylistObservable>>"+name, Toast.LENGTH_LONG)
                     idForPlaylistObservable(name)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())

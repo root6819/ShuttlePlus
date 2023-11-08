@@ -151,6 +151,7 @@ public class SongView extends BaseSelectableViewModel<SongView.ViewHolder> imple
     @Override
     public void bindView(ViewHolder holder) {
         super.bindView(holder);
+        //root6819 在歌曲列表显示
          String title="a2>>"+song.name;
         //  LogUtils.logException(TAG, "Failed convert song name "+title, null);
 
