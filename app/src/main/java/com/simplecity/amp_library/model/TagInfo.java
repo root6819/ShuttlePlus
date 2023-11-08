@@ -42,7 +42,10 @@ public class TagInfo implements Serializable {
                     this.artistName = getTag(audioFile, FieldKey.ARTIST);
                     this.albumArtistName = getTag(audioFile, FieldKey.ALBUM_ARTIST);
                     this.albumName = getTag(audioFile, FieldKey.ALBUM);
-                    this.trackName ="a7>>"+ getTag(audioFile, FieldKey.TITLE);
+                    //这是文件夹对话框显示单曲的地方
+                    // this.trackName ="a7>>"+ getTag(audioFile, FieldKey.TITLE);
+                    this.trackName ="a7>>"+ getTag(audioFile, FieldKey.DISPLAY_NAME);
+
                     this.trackNumber = StringUtils.parseInt(getTag(audioFile, FieldKey.TRACK));
                     this.trackTotal = StringUtils.parseInt(getTag(audioFile, FieldKey.TRACK_TOTAL));
                     this.discNumber = StringUtils.parseInt(getTag(audioFile, FieldKey.DISC_NO));

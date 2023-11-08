@@ -65,7 +65,17 @@
                 android:maxLines="1"
                 android:textSize="14sp"
                 tools:text="Feeling Kind Of Anxious"/>
-
+       <TextView
+                android:id="@+id/root6819folder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textSize="14sp"
+                tools:text="this is Folder??" />
             <TextView
                 android:id="@+id/line_two"
                 style="?attr/secondaryTextViewStyle"
