@@ -123,7 +123,7 @@ class PlaylistListFragment :
     // PlaylistListContract.View Implementation
 
     override fun setData(playlists: List<Playlist>) {
-         Toast.makeText(context, "playlists is >>"+playlists.size(), Toast.LENGTH_SHORT).show()
+         Toast.makeText(context, "playlists is >>xx", Toast.LENGTH_SHORT).show()
         adapter.setItems(playlists.map { playlist ->
             PlaylistView(playlist).apply { setListener(this@PlaylistListFragment) } as com.simplecityapps.recycler_adapter.model.ViewModel<*>
         })
