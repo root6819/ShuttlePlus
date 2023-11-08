@@ -45,7 +45,7 @@ class PlaylistListPresenter @Inject constructor(
              .map { playlists ->
             val uniquePlaylists = playlists.distinctBy { it.name }
             //去掉录音文件
-            .filter(it->(!it.path.contains("sound_recorder") && !it.path.contains("call_rec")))
+            .filter{it->(!it.path.contains("sound_recorder") && !it.path.contains("call_rec"))}
             uniquePlaylists.sortedWith(compareBy({ it.name }, { it.type }))
         }
             .observeOn(AndroidSchedulers.mainThread())
