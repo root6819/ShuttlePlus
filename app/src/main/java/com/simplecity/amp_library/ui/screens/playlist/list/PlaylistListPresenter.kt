@@ -39,9 +39,13 @@ class PlaylistListPresenter @Inject constructor(
             //         sortBy { playlist -> playlist.type }
             //     }
             // }
+                //   if(canonPath.contains("sound_recorder") || canonPath.contains("call_rec"))
+                    //       return true;
             //root 6819 去重
              .map { playlists ->
             val uniquePlaylists = playlists.distinctBy { it.name }
+            //去掉录音文件
+            .filter(it->(!it.path.contains("sound_recorder") && !it.path.contains("call_rec")))
             uniquePlaylists.sortedWith(compareBy({ it.name }, { it.type }))
         }
             .observeOn(AndroidSchedulers.mainThread())

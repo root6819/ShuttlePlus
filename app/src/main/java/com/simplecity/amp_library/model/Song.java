@@ -103,8 +103,8 @@ public class Song implements
     public Song(Cursor cursor) {
 
         id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
-        //root6819 在歌曲列表以及歌曲详情显示
-        name ="a1>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME));
+        //root6819 在歌曲列表以及歌曲详情显示"a1>>"+
+        name = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME));
         // try{
         //     byte[] bName =  cursor.getBlob(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
         //     name=new String(bName,"GBK");

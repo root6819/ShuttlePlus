@@ -56,8 +56,8 @@ public class FileBrowser {
                 if (file.isDirectory()) {
                     baseFileObject = new FolderObject();
                     baseFileObject.path = FileHelper.getPath(file);
-                    //root6819 在目录浏览时显示
-                    baseFileObject.name ="a4>>"+ file.getName();
+                    //root6819 在目录浏览时显示"a4>>"+ 
+                    baseFileObject.name =file.getName();
                     File[] listOfFiles = file.listFiles(FileHelper.getAudioFilter());
                     if (listOfFiles != null && listOfFiles.length > 0) {
                         for (File listOfFile : listOfFiles) {
@@ -76,8 +76,8 @@ public class FileBrowser {
                 } else {
                     baseFileObject = new FileObject();
                     baseFileObject.path = FileHelper.getPath(file);
-                    //root6819 
-                    baseFileObject.name ="a3>>"+ file.getName();// FileHelper.getName(file.getName());
+                    //root6819 "a3>>"+ 
+                    baseFileObject.name =file.getName();// FileHelper.getName(file.getName());
                     //LogUtils.logException(TAG, "a3>> convert song name "+baseFileObject.name, null);
 
                     // try{
@@ -87,9 +87,9 @@ public class FileBrowser {
                     // }
                     // catch(Exception ex){
  
-                    // }
+                    // }a3>>ext"+
                     baseFileObject.size = file.length();
-                    ((FileObject) baseFileObject).extension ="a3>>ext"+ FileHelper.getExtension(file.getName());
+                    ((FileObject) baseFileObject).extension =  FileHelper.getExtension(file.getName());
                     if (TextUtils.isEmpty(((FileObject) baseFileObject).extension)) {
                         continue;
                     }

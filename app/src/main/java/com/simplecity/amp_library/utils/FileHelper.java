@@ -355,12 +355,12 @@ public class FileHelper {
                 if (file.isDirectory()) {
                     return true;
                 } else {
-                    //root6819 过滤所有录音文件
-                    try{
-                      String canonPath = file.getCanonicalPath();
-                      if(canonPath.contains("sound_recorder") || canonPath.contains("call_rec"))
-                          return true;
-                    }catch(Exception ex){}
+                    //不生效 //root6819 过滤所有录音文件
+                    // try{
+                    //   String canonPath = file.getCanonicalPath();
+                    //   if(canonPath.contains("sound_recorder") || canonPath.contains("call_rec"))
+                    //       return true;
+                    // }catch(Exception ex){}
                     
                     String ext = getExtension(file.getName());
                     for (String allowedExtension : sExtensions) {
