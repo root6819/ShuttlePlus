@@ -105,12 +105,12 @@ public class Song implements
         id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
         //root6819 
         name ="a1>>"+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
-        try{
-            byte[] bName =  cursor.getBlob(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
-            name=new String(bName,"GBK");
-        }catch(Exception ex){
+        // try{
+        //     byte[] bName =  cursor.getBlob(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
+        //     name=new String(bName,"GBK");
+        // }catch(Exception ex){
 
-        }
+        // }
         artistId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST_ID));
 //root6819
         artistName = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
