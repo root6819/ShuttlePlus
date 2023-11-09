@@ -213,6 +213,8 @@ public class DeleteDialog extends DialogFragment implements SafManager.SafDialog
 
     @NonNull
     Single<List<Song>> getSongs() {
+        //root6819
+        LogUtils.logException(TAG, "getSongs....", null);
         switch (type) {
             case Type.ARTISTS:
                 return Observable.fromIterable(artists)
@@ -227,6 +229,7 @@ public class DeleteDialog extends DialogFragment implements SafManager.SafDialog
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread());
             case Type.SONGS:
+                LogUtils.logException(TAG, "getSongs->songs...."+songs.size(), null);
                 return Single.just(songs);
         }
         return Single.just(Collections.emptyList());

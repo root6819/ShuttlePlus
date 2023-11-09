@@ -32,7 +32,10 @@ class PlaylistListPresenter @Inject constructor(
     }
 
     override fun loadData() {
+      //这里竟然不加载？？？
         LogUtils.writerLog(true,TAG, "test log...")
+        if(1==1)
+         return
         addDisposable(playlistsRepository.getAllPlaylists(songsRepository)
             // .map { playlists ->
             //     playlists.apply {
@@ -45,6 +48,10 @@ class PlaylistListPresenter @Inject constructor(
             //root 6819 去重
              .map { playlists ->
                   val uniquePlaylists = playlists.distinctBy { it.name }
+
+                  uniquePlaylists.forEach(song -> {
+
+                  })
                     //竟然path不存在          //去掉录音文件 
                   //  .filter {item-> !item.path.contains("sound_recorder") } // 过滤包含 "xxx" 的路径
                   uniquePlaylists.sortedWith(compareBy({ it.name }, { it.type }))
