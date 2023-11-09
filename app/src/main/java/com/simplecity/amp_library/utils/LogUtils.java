@@ -40,7 +40,7 @@ public class LogUtils {
      * @param msg 需要打印的内容
      */
     public static void writerLog(boolean isWriteLog, String msg) {
-       
+        FirebaseCrashlytics.getInstance().log("xxx");
         if (isWriteLog) {
             //保存到的文件路径
             final String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();

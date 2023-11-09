@@ -24,6 +24,8 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("com.github.triplet.play") version "2.1.0"
+    //root6819 Add the Crashlytics Gradle plugin
+    id 'com.google.firebase.crashlytics'
 }
 
 apply plugin: Dependencies.BuildPlugins.dexCount
@@ -298,6 +300,8 @@ dependencies {
     androidTestImplementation(Dependencies.Testing.espresso) {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
+    //root6819
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.7'
 }
 
 configurations.all {
@@ -352,6 +356,6 @@ play {
     track = getPlayStoreTrack()
     serviceAccountCredentials = file('../deployment_keys.json')
 }
-
+//root6819
 apply plugin: Dependencies.BuildPlugins.playServices
 // apply plugin: 'com.google.gms.google-services'
