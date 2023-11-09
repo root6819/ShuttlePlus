@@ -228,8 +228,8 @@ public class DeleteDialog extends DialogFragment implements SafManager.SafDialog
                         .reduce(Collections.<Song>emptyList(), (songs, songs2) -> Stream.concat(Stream.of(songs), Stream.of(songs2)).toList())
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread());
-            case Type.SONGS:
-                LogUtils.logException(TAG, "getSongs->songs...."+songs.size(), null);
+            case Type.SONGS://+songs.size()
+                LogUtils.logException(TAG, "getSongs->songs....", null);
                 return Single.just(songs);
         }
         return Single.just(Collections.emptyList());

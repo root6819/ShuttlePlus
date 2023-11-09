@@ -34,8 +34,7 @@ class PlaylistListPresenter @Inject constructor(
     override fun loadData() {
       //这里竟然不加载？？？
         LogUtils.writerLog(true,TAG, "test log...")
-        if(1==1)
-         return
+        if(1==2)
         addDisposable(playlistsRepository.getAllPlaylists(songsRepository)
             // .map { playlists ->
             //     playlists.apply {
