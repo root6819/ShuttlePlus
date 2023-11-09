@@ -5,7 +5,7 @@ import android.util.Log;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.simplecity.amp_library.BuildConfig;
-import android.os.Environment
+import android.os.Environment;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
