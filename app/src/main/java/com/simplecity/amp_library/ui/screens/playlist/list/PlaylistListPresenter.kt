@@ -32,6 +32,7 @@ class PlaylistListPresenter @Inject constructor(
     }
 
     override fun loadData() {
+        LogUtils.logException(TAG, "test log...", null)
         addDisposable(playlistsRepository.getAllPlaylists(songsRepository)
             // .map { playlists ->
             //     playlists.apply {
@@ -44,8 +45,8 @@ class PlaylistListPresenter @Inject constructor(
             //root 6819 去重
              .map { playlists ->
                   val uniquePlaylists = playlists.distinctBy { it.name }
-                              //去掉录音文件
-                    .filter {item-> !item.path.contains("sound_recorder") } // 过滤包含 "xxx" 的路径
+                    //竟然path不存在          //去掉录音文件 
+                  //  .filter {item-> !item.path.contains("sound_recorder") } // 过滤包含 "xxx" 的路径
                   uniquePlaylists.sortedWith(compareBy({ it.name }, { it.type }))
              }
             .observeOn(AndroidSchedulers.mainThread())
