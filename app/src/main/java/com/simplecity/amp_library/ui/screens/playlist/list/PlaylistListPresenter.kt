@@ -32,7 +32,7 @@ class PlaylistListPresenter @Inject constructor(
     }
 
     override fun loadData() {
-        LogUtils.logException(TAG, "test log...", null)
+        LogUtils.writerLog(true,TAG, "test log...")
         addDisposable(playlistsRepository.getAllPlaylists(songsRepository)
             // .map { playlists ->
             //     playlists.apply {

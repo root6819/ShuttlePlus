@@ -19,7 +19,7 @@ public class LogUtils {
     }
 
     public static void logException(String tag, String message, @Nullable Throwable throwable) {
-       writerLog(true,message);
+        writerLog(true,tag,message);
         if (BuildConfig.DEBUG) {
             Log.e(tag, message + "\nThrowable: " + (throwable != null ? throwable.getMessage() : null));
             if (throwable != null) {
@@ -39,7 +39,7 @@ public class LogUtils {
      * 路径 "/storage/emulated/0/lowTemperatureTest"
      * @param msg 需要打印的内容
      */
-    public static void writerLog(boolean isWriteLog, String msg) {
+    public static void writerLog(boolean isWriteLog,String tag, String msg) {
         // FirebaseCrashlytics.getInstance().log("xxx");
         if (isWriteLog) {
             //保存到的文件路径
@@ -61,7 +61,7 @@ public class LogUtils {
                 //写入日志文件
                 fileWriter = new FileWriter(file, true);
                 bufferedWriter = new BufferedWriter(fileWriter);
-                bufferedWriter.write( msg + "=======时间 :"+ getCurrentTime()+ "\n");
+                bufferedWriter.write(tag+":\n"+ msg + "=======时间 :"+ getCurrentTime()+ "\n");
                 bufferedWriter.close();
             } catch (Exception e) {
                 e.printStackTrace();
