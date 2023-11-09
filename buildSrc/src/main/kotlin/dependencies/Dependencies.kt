@@ -86,7 +86,8 @@ object Dependencies {
             const val dexcountGradlePlugin = "0.8.6"
             const val fabricGradlePlugin = "1.+"
             const val gradleVersions = "0.20.0"
-            const val playServices = "4.2.0"
+            // const val playServices = "4.2.0"
+            const val playServices = "4.3.10"
         }
 
         const val android = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
