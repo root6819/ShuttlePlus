@@ -3,7 +3,7 @@ package com.simplecity.amp_library.utils;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import com.crashlytics.android.Crashlytics;
-import com.google.firebase.crashlytics.FirebaseCrashlytics;
+// import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.simplecity.amp_library.BuildConfig;
 import android.os.Environment;
 import java.io.BufferedWriter;
@@ -40,7 +40,7 @@ public class LogUtils {
      * @param msg 需要打印的内容
      */
     public static void writerLog(boolean isWriteLog, String msg) {
-        FirebaseCrashlytics.getInstance().log("xxx");
+        // FirebaseCrashlytics.getInstance().log("xxx");
         if (isWriteLog) {
             //保存到的文件路径
             final String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
