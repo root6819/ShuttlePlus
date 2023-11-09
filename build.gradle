@@ -12,8 +12,8 @@ buildscript {
         classpath Dependencies.Plugins.gradleVersions
 
            //root6819 Add the dependency for the Crashlytics Gradle plugin
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.0'
-        
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.5'
+
         classpath Dependencies.Plugins.playServices
         classpath Dependencies.Plugins.kotlin
        

@@ -80,7 +80,7 @@ object Dependencies {
     object Plugins {
 
         object Versions {
-            const val androidGradlePlugin = "3.5.4"
+            const val androidGradlePlugin ="4.2.0" //root6819 "3.5.4"
             const val kotlin = "1.3.21"
             const val ktx = "1.0.0"
             const val dexcountGradlePlugin = "0.8.6"
