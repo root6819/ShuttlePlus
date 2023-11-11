@@ -17,6 +17,7 @@ class PlaylistMenuHelper @Inject constructor(
 ) {
 
     fun createPlaylistMenu(subMenu: SubMenu): Disposable {
+         LogUtils.logException(TAG, "root6819 createPlaylistMenu...",null);
         return createPlaylistMenu(subMenu, false)
             .subscribe(
                 { },

@@ -154,7 +154,7 @@ public class ShuttleApplication extends DaggerApplication {
                     .uri(CustomArtworkTable.URI)
                     .projection(new String[] { CustomArtworkTable.COLUMN_ID, CustomArtworkTable.COLUMN_KEY, CustomArtworkTable.COLUMN_TYPE, CustomArtworkTable.COLUMN_PATH })
                     .build();
-
+LogUtils.logException(TAG, "root6819 Completable.fromAction》"+CustomArtworkTable.URI.toString(), null);
             SqlUtils.createActionableQuery(ShuttleApplication.this, cursor ->
                             userSelectedArtwork.put(
                                     cursor.getString(cursor.getColumnIndexOrThrow(CustomArtworkTable.COLUMN_KEY)),

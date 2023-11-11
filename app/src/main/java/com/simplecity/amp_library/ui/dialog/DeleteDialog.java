@@ -214,7 +214,7 @@ public class DeleteDialog extends DialogFragment implements SafManager.SafDialog
     @NonNull
     Single<List<Song>> getSongs() {
         //root6819
-        LogUtils.logException(TAG, "getSongs....", null);
+        LogUtils.logException(TAG, "root6819 getSongs 不执行....", null);
         switch (type) {
             case Type.ARTISTS:
                 return Observable.fromIterable(artists)

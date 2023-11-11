@@ -29,6 +29,7 @@ class PlaylistsRepository @Inject constructor(
     private val playlistsRelay = BehaviorRelay.create<List<Playlist>>()
 
     override fun getPlaylists(): Observable<List<Playlist>> {
+        LogUtils.logException(TAG, "root6819 getPlaylists...", null)
         if (playlistsSubscription == null || playlistsSubscription?.isDisposed == true) {
             playlistsSubscription = SqlBriteUtils.createObservableList(
                 context,

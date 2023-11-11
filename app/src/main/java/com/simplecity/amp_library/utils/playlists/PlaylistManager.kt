@@ -235,6 +235,7 @@ class PlaylistManager @Inject constructor(
     }
 
     fun addFileObjectsToPlaylist(context: Context, playlist: Playlist, fileObjects: List<BaseFileObject>, callback: Function1<Int, Unit>): Disposable {
+     LogUtils.logException(TAG, "root6819 addFileObjectsToPlaylist...", null)
         val progressDialog = ProgressDialog.show(context, "", context.getString(R.string.gathering_songs), false)
 
         val folderCount = fileObjects
