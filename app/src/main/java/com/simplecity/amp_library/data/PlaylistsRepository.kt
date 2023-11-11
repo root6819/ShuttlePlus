@@ -45,6 +45,7 @@ class PlaylistsRepository @Inject constructor(
     }
 
     override fun getAllPlaylists(songsRepository: SongsRepository): Observable<MutableList<Playlist>> {
+       LogUtils.logException(TAG, "root6819 getAllPlaylists...", null)
         val defaultPlaylistsObservable = Observable.fromCallable<List<Playlist>> {
             val playlists = mutableListOf<Playlist>()
 
@@ -71,6 +72,10 @@ class PlaylistsRepository @Inject constructor(
                         songsRepository.getSongs(playlist)
                             .first(emptyList())
                             .flatMapObservable { songs ->
+                                songs.forEach{song->
+       LogUtils.logException(TAG, "root6819 getAllPlaylists ${song.name} \n", null)
+
+                                }
                                 if (playlist.type != Type.USER_CREATED && playlist.type != Type.FAVORITES && songs.isEmpty()
                                 ) {
                                     Observable.empty()
