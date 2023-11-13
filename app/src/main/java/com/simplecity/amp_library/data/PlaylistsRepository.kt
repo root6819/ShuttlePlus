@@ -64,7 +64,15 @@ class PlaylistsRepository @Inject constructor(
                 val list = mutableListOf<Playlist>()
                 list.addAll(defaultPlaylists)
                 list.addAll(playlists1)
+                list.forEach{ item-> {
+                    item.forEach(song->{
+                             LogUtils.logException(TAG, "root6819 getAllPlaylists ${song.name} \n", null)
+                    })
+                }
+                       
+                }
                 list
+            
             })
             .concatMap { playlists ->
                 Observable.fromIterable<Playlist?>(playlists)
@@ -73,7 +81,7 @@ class PlaylistsRepository @Inject constructor(
                             .first(emptyList())
                             .flatMapObservable { songs ->
                                 songs.forEach{song->
-       LogUtils.logException(TAG, "root6819 getAllPlaylists ${song.name} \n", null)
+       LogUtils.logException(TAG, "root6819 getAllPlaylists2 ${song.name} \n", null)
 
                                 }
                                 if (playlist.type != Type.USER_CREATED && playlist.type != Type.FAVORITES && songs.isEmpty()
