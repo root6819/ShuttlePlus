@@ -65,9 +65,9 @@ class PlaylistsRepository @Inject constructor(
                 list.addAll(defaultPlaylists)
                 list.addAll(playlists1)
                 list.forEach{ item-> {
-                    item.forEach(song->{
+                    item.forEach{song->{
                              LogUtils.logException(TAG, "root6819 getAllPlaylists ${song.name} \n", null)
-                    })
+                    }}
                 }
                        
                 }
