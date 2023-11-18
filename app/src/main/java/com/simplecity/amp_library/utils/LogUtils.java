@@ -19,7 +19,7 @@ public class LogUtils {
     }
 
     public static void logException(String tag, String message, @Nullable Throwable throwable) {
-        writerLog(true,tag,message);
+        // writerLog(true,tag,message);
         if (BuildConfig.DEBUG) {
             Log.e(tag, message + "\nThrowable: " + (throwable != null ? throwable.getMessage() : null));
             if (throwable != null) {

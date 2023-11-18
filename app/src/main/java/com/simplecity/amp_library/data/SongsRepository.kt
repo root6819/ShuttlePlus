@@ -53,9 +53,17 @@ open class SongsRepository @Inject constructor(
                     Consumer { error -> LogUtils.logException(PlaylistsRepository.TAG, "Failed to get all songs", error) }
                 )
         }
-
-        return allSongsRelay
+        //20231118 root6819 其实最后都调用到这里，直接在这加上就是
+        var ret = allSongsRelay.map { songs ->
+            var lstSong = songs.filter { x -> !x.path.contains("sound_recorder") }
+                .distinctBy { it.name }
+            //  v2.toMutableList()
+            lstSong//return
+        }
+        return ret
             .subscribeOn(Schedulers.io())
+        // return allSongsRelay
+        //     .subscribeOn(Schedulers.io())
     }
 
     override fun getSongs(predicate: ((Song) -> Boolean)?): Observable<List<Song>> {
